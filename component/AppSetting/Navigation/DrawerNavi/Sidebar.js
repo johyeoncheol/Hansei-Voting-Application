@@ -1,6 +1,5 @@
-
-import React from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+﻿import React from 'react';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {DrawerNavigatorItems} from 'react-navigation-drawer';
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -13,10 +12,11 @@ export default class Sidebar extends React.Component {
             <View>
                 <View style={styles.profileContainer}>
                     <View style={styles.profile}>
-                        <AntDesign name='rocket1' size={40} color='#05fbcb'/>
+                        {/* <AntDesign name='rocket1' size={40} color='#05fbcb'/> */}
+                        <Image style={{width:50,height:50}} source={require('../../../../assets/HanseiLogo.png')}/>
                         <View style={{marginLeft:12}}>
-                            <Text style={{opacity:0.6}}>Logged in as</Text>
-                            <Text style={{fontSize:22, color:'white', opacity:0.9}}>Dean</Text>
+                            <Text style={{marginLeft:3,opacity:0.6}}>HVP</Text>
+                            <Text style={{fontSize:22, color:'white', opacity:0.9}}>로그인</Text>
                         </View>
                     </View>
                     <TouchableOpacity onPress={_ => this.props.navigation.closeDrawer()}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         display:"flex", 
         flexDirection:"row",
         justifyContent: "space-between",
-        backgroundColor: "#bc45b4",
+        backgroundColor: "#f3b020",
     },
     profile: {
         display:"flex", 
