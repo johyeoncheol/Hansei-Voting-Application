@@ -4,25 +4,26 @@ import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
-import BackButton from "../components/BackButton";
+import { View } from "react-native";
 
 const HomeScreen = ({ navigation }) => (
   <Background>
-    <Logo />
-    <Header>Firebase Login</Header>
+    <View style={{marginBottom:30}}></View>
+    <Logo/>
 
-    <Paragraph>
-      This template supports Firebase authorization out of the box.
-    </Paragraph>
+    <View style={{marginBottom:60}}></View>
     <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
-      Login
+      로그인
     </Button>
     <Button
       mode="outlined"
       onPress={() => navigation.navigate("RegisterScreen")}
     >
-      Sign Up
+      회원가입
     </Button>
+    <Paragraph>
+      Hansei Voting은 학교 공식 홈페이지와 별개로 회원가입을 하셔야 합니다.
+    </Paragraph>
   </Background>
 );
 

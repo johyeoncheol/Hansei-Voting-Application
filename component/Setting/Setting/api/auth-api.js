@@ -17,23 +17,23 @@ export const signInUser = async ({ name, email, password }) => {
     switch (error.code) {
       case "auth/email-already-in-use":
         return {
-          error: "E-mail already in use."
+          error: "이미 사용중인 이메일입니다."
         };
       case "auth/invalid-email":
         return {
-          error: "Invalid e-mail address format."
+          error: "이메일 형식이 유효하지 않습니다."
         };
       case "auth/weak-password":
         return {
-          error: "Password is too weak."
+          error: "패스워드가 너무 짧습니다."
         };
       case "auth/too-many-requests":
         return {
-          error: "Too many request. Try again in a minute."
+          error: "요청이 많습니다. 다시 시도 부탁드립니다."
         };
       default:
         return {
-          error: "Check your internet connection."
+          error: "인터넷 연결이 되어있지 않습니다."
         };
     }
   }
@@ -47,20 +47,20 @@ export const loginUser = async ({ email, password }) => {
     switch (error.code) {
       case "auth/invalid-email":
         return {
-          error: "Invalid email address format."
+          error: "이메일 형식이 유효하지 않습니다."
         };
       case "auth/user-not-found":
       case "auth/wrong-password":
         return {
-          error: "Invalid email address or password."
+          error: "이메일 또는 패스워드가 유효하지 않습니다."
         };
       case "auth/too-many-requests":
         return {
-          error: "Too many request. Try again in a minute."
+          error: "요청이 많습니다. 다시 시도 부탁드립니다."
         };
       default:
         return {
-          error: "Check your internet connection."
+          error: "인터넷 연결이 되어있지 않습니다."
         };
     }
   }
@@ -74,19 +74,19 @@ export const sendEmailWithPassword = async email => {
     switch (error.code) {
       case "auth/invalid-email":
         return {
-          error: "Invalid email address format."
+          error: "이메일 형식이 유효하지 않습니다."
         };
       case "auth/user-not-found":
         return {
-          error: "User with this email does not exist."
+          error: "유저 이메일이 존재하지 않습니다."
         };
       case "auth/too-many-requests":
         return {
-          error: "Too many request. Try again in a minute."
+          error: "요청이 많습니다. 다시 시도 부탁드립니다."
         };
       default:
         return {
-          error: "Check your internet connection."
+          error: "인터넷 연결이 되어있지 않습니다."
         };
     }
   }

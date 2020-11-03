@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Feather';
+
 export default class OffLogin extends Component {
     render() {
         return (
@@ -15,30 +16,29 @@ export default class OffLogin extends Component {
                         <Text style={styles.TouchFont}>로그인 정보</Text>
                     </View>
                     <View style={styles.LoginDo}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')} style={{flexDirection:'row'}}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('LoginHome')} style={{flexDirection:'row'}}>
                             <Text style={styles.TouchFont}>로그인</Text>
                             <Icon name='chevron-right' size={20} style={{marginLeft:10}}  />
                         </TouchableOpacity>
                     </View>
-
                 </View>
                 <View style={styles.TextContainer}>
                     <Text style={styles.textFont}>고객지원</Text>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('FAQ')} style={{flexDirection:'row'}}>
                         <Icon name='help-circle' size={20} style={{marginRight:10}} />
                         <Text style={styles.TouchFont}>한세Voting FAQ</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('OpenSource')} style={{flexDirection:'row'}}>
                         <Icon name='feather' size={20} style={{marginRight:10}} />
                         <Text style={styles.TouchFont}>오픈소스 라이선스</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Version')} style={{flexDirection:'row'}}>
                         <Icon name='alert-circle' size={20} style={{marginRight:10}} />
                         <Text style={styles.TouchFont}>Version 정보</Text>
                     </TouchableOpacity>

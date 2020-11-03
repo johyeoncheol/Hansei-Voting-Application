@@ -5,17 +5,20 @@ import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import Button from "../components/Button";
 import { logoutUser } from "../api/auth-api";
+import { View } from "react-native";
 
-const Dashboard = () => (
+const Dashboard = ({navigation}) => (
   <Background>
+    <View style={{marginBottom:30}}></View>
     <Logo />
-    <Header>Let’s start</Header>
     <Paragraph>
-      Your amazing app starts here. Open you favourite code editor and start
-      editing this project.
+      로그아웃 하시겠습니까?
     </Paragraph>
+    <Button mode="contained" onPress={() => navigation.navigate("OnLogin")}>
+      돌아가기
+    </Button>
     <Button mode="outlined" onPress={() => logoutUser()}>
-      Logout
+      로그아웃
     </Button>
   </Background>
 );

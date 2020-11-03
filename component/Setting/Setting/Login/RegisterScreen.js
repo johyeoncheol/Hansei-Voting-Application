@@ -53,14 +53,12 @@ const RegisterScreen = ({ navigation }) => {
 
   return (
     <Background>
-      <BackButton goBack={() => navigation.navigate("HomeScreen")} />
+      <BackButton goBack={() => navigation.navigate("LoginHome")} />
 
-      <Logo />
-
-      <Header>Create Account</Header>
+      <Header>회원가입</Header>
 
       <TextInput
-        label="Name"
+        label="이름"
         returnKeyType="next"
         value={name.value}
         onChangeText={text => setName({ value: text, error: "" })}
@@ -69,7 +67,7 @@ const RegisterScreen = ({ navigation }) => {
       />
 
       <TextInput
-        label="Email"
+        label="이메일"
         returnKeyType="next"
         value={email.value}
         onChangeText={text => setEmail({ value: text, error: "" })}
@@ -82,7 +80,7 @@ const RegisterScreen = ({ navigation }) => {
       />
 
       <TextInput
-        label="Password"
+        label="패스워드"
         returnKeyType="done"
         value={password.value}
         onChangeText={text => setPassword({ value: text, error: "" })}
@@ -98,16 +96,8 @@ const RegisterScreen = ({ navigation }) => {
         onPress={_onSignUpPressed}
         style={styles.button}
       >
-        Sign Up
+         회원가입
       </Button>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>Already have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-          <Text style={styles.link}>Login</Text>
-        </TouchableOpacity>
-      </View>
-
       <Toast message={error} onDismiss={() => setError("")} />
     </Background>
   );
@@ -115,7 +105,8 @@ const RegisterScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   label: {
-    color: theme.colors.secondary
+    color: theme.colors.secondary,
+    marginRight:5
   },
   button: {
     marginTop: 24

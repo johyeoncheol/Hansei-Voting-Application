@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Feather';
-import User from 'react-native-vector-icons/FontAwesome5'
+import User from 'react-native-vector-icons/FontAwesome5';
+
 export default class OffLogin extends Component {
     render() {
         return (
@@ -16,20 +17,20 @@ export default class OffLogin extends Component {
                         <Text style={styles.TouchFont}>로그인 정보</Text>
                     </View>
                     <View style={styles.LoginDo}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Dashboard')} style={{flexDirection:'row'}}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Logout')} style={{flexDirection:'row'}}>
                             <Text style={styles.TouchFont}>로그아웃</Text>
                             <Icon name='chevron-right' size={20} style={{marginLeft:7}}  />
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('FAQ')} style={{flexDirection:'row'}}>
                         <User name='user-edit' size={20} style={{marginRight:7}} />
                         <Text style={styles.TouchFont}>개인정보 변경</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('FAQ')} style={{flexDirection:'row'}}>
                         <User name='user-lock' size={20} style={{marginRight:7}} />
                         <Text style={styles.TouchFont}>비밀번호 변경</Text>
                     </TouchableOpacity>
@@ -38,19 +39,19 @@ export default class OffLogin extends Component {
                     <Text style={styles.textFont}>고객지원</Text>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('FAQ')} style={{flexDirection:'row'}}>
                         <Icon name='help-circle' size={20} style={{marginRight:7}} />
                         <Text style={styles.TouchFont}>한세Voting FAQ</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('OpenSource')} style={{flexDirection:'row'}}>
                         <Icon name='feather' size={20} style={{marginRight:7}} />
                         <Text style={styles.TouchFont}>오픈소스 라이선스</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.RestContainer}>
-                    <TouchableOpacity style={{flexDirection:'row'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Version')} style={{flexDirection:'row'}}>
                         <Icon name='alert-circle' size={20} style={{marginRight:7}} />
                         <Text style={styles.TouchFont}>Version 정보</Text>
                     </TouchableOpacity>

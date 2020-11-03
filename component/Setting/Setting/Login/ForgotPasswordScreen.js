@@ -1,5 +1,5 @@
 import React, { memo, useState } from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 import { emailValidator } from "../core/utils";
 import Background from "../components/Background";
 import BackButton from "../components/BackButton";
@@ -46,12 +46,11 @@ const ForgotPasswordScreen = ({ navigation }) => {
     <Background>
       <BackButton goBack={() => navigation.navigate("LoginScreen")} />
 
-      <Logo />
-
-      <Header>Restore Password</Header>
+      <View style={{marginBottom:60}}></View>
+      <Header>비밀번호 찾기</Header>
 
       <TextInput
-        label="E-mail address"
+        label="이메일을 입력하세요"
         returnKeyType="done"
         value={email.value}
         onChangeText={text => setEmail({ value: text, error: "" })}
@@ -69,7 +68,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
         onPress={_onSendPressed}
         style={styles.button}
       >
-        Send Reset Instructions
+        이메일로 찾기
       </Button>
 
       <TouchableOpacity
@@ -97,6 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 12
   },
   label: {
+    marginTop:10,
     color: theme.colors.secondary,
     width: "100%"
   }

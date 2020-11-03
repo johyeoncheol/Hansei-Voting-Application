@@ -45,14 +45,13 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <Background>
-      <BackButton goBack={() => navigation.navigate("HomeScreen")} />
+      <BackButton goBack={() => navigation.navigate("LoginHome")} />
 
-      <Logo />
-
-      <Header>Welcome back.</Header>
+      <View style={{marginBottom:10}}></View>
+      <Header>로그인</Header>
 
       <TextInput
-        label="Email"
+        label="이메일"
         returnKeyType="next"
         value={email.value}
         onChangeText={text => setEmail({ value: text, error: "" })}
@@ -65,7 +64,7 @@ const LoginScreen = ({ navigation }) => {
       />
 
       <TextInput
-        label="Password"
+        label="패스워드"
         returnKeyType="done"
         value={password.value}
         onChangeText={text => setPassword({ value: text, error: "" })}
@@ -75,25 +74,25 @@ const LoginScreen = ({ navigation }) => {
         autoCapitalize="none"
       />
 
+
+      <Button loading={loading} mode="contained" onPress={_onLoginPressed}>
+        로그인
+      </Button>
+
+    <View style={{flexDirection:'row',marginTop:14}}>
       <View style={styles.forgotPassword}>
         <TouchableOpacity
           onPress={() => navigation.navigate("ForgotPasswordScreen")}
         >
-          <Text style={styles.label}>Forgot your password?</Text>
+          <Text style={styles.label}>비밀번호 찾기</Text>
         </TouchableOpacity>
       </View>
-
-      <Button loading={loading} mode="contained" onPress={_onLoginPressed}>
-        Login
-      </Button>
-
       <View style={styles.row}>
-        <Text style={styles.label}>Don’t have an account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate("RegisterScreen")}>
-          <Text style={styles.link}>Sign up</Text>
+          <Text style={styles.link}>회원가입</Text>
         </TouchableOpacity>
       </View>
-
+    </View>
       <Toast message={error} onDismiss={() => setError("")} />
     </Background>
   );
@@ -101,16 +100,15 @@ const LoginScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   forgotPassword: {
-    width: "100%",
-    alignItems: "flex-end",
+    width: "50%",
     marginBottom: 24
   },
   row: {
     flexDirection: "row",
-    marginTop: 4
   },
   label: {
-    color: theme.colors.secondary
+    color: theme.colors.secondary,
+    marginRight:5
   },
   link: {
     fontWeight: "bold",

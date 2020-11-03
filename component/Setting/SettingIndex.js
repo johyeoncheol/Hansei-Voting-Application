@@ -5,32 +5,28 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import CustomerSupport from "./Setting/CustomerSupport/CSIndex";
 import FAQ from './Setting/FAQ/FAQIndex';
-import Login from './Setting/Login/loginIndex';
 import OpenSource from './Setting/OpenSource/OSIndex';
 import Version from './Setting/Version/VersionIndex';
-import AuthLoadingScreen from './Setting/SettingScreen/AuthLoadingScreen';
-import OnLogin from './Setting/SettingScreen/OnLogin';
-import OffLogin from './Setting/SettingScreen/OffLogin';
-import Dashboard from './Setting/Login/loginApp/screens/Dashboard'
+import AuthLoadingScreen from './Setting/AuthLoadingScreen';
+import OnLogin from './Setting/OnLogin';
+import OffLogin from './Setting/OffLogin';
+import LoginHome from './Setting/Login/LoginHome';
+import Logout from './Setting/Logout/Logout';
+import LoginScreen from './Setting/Login/LoginScreen';
+import RegisterScreen from './Setting/Login/RegisterScreen';
+import ForgotPasswordScreen from './Setting/Login/ForgotPasswordScreen';
 
 const Router = createStackNavigator(
     {
-        OnLogin:{
-            screen:OnLogin
+        OnLogin: {
+            screen: OnLogin
         },
-        OffLogin:{
-            screen:OffLogin
-        },
-        CustomerSupport: {
-            screen: CustomerSupport
+        OffLogin: {
+            screen: OffLogin
         },
         FAQ: {
             screen: FAQ
-        },
-        Login: {
-            screen: Login
         },
         OpenSource: {
             screen: OpenSource
@@ -39,15 +35,27 @@ const Router = createStackNavigator(
             screen: Version
         },
         AuthLoadingScreen:{
-            screen: AuthLoadingScreen
+            screen:AuthLoadingScreen
         },
-        Dashboard:{
-            screen: Dashboard
+        LoginHome:{
+            screen:LoginHome
+        },
+        Logout:{
+            screen:Logout
+        },
+        LoginScreen:{
+            screen:LoginScreen
+        },
+        RegisterScreen:{
+            screen:RegisterScreen
+        },
+        ForgotPasswordScreen:{
+            screen:ForgotPasswordScreen
         }
     },
     {
-        initialRouteName:"AuthLoadingScreen",
-        headerMode:"none"
+        initialRouteName: "AuthLoadingScreen",
+        headerMode: "none"
     }
 )
 const SettingRouter = createAppContainer(Router);
@@ -60,7 +68,7 @@ export default class SettingIndex extends React.Component {
     }
     render() {
         return (
-            <SettingRouter/>
+            <SettingRouter />
         )
     }
 }

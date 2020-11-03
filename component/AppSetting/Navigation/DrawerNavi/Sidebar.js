@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {DrawerNavigatorItems} from 'react-navigation-drawer';
 import { AntDesign } from '@expo/vector-icons';
@@ -6,7 +6,6 @@ import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class Sidebar extends React.Component {
-
     render() {
         return (
             <View>
@@ -14,9 +13,9 @@ export default class Sidebar extends React.Component {
                     <View style={styles.profile}>
                         {/* <AntDesign name='rocket1' size={40} color='#05fbcb'/> */}
                         <Image style={{width:50,height:50}} source={require('../../../../assets/HanseiLogo.png')}/>
-                        <View style={{marginLeft:12}}>
-                            <Text style={{marginLeft:3,opacity:0.6}}>HVP</Text>
-                            <Text style={{fontSize:22, color:'white', opacity:0.9}}>로그인</Text>
+                        <View style={{marginLeft:3,marginTop:2}}>
+                            <Text style={{marginLeft:6,opacity:0.6,fontSize:17}}>Hansei</Text>
+                            <Text style={{marginLeft:6,opacity:0.6,fontSize:17}}>Voting apP</Text>
                         </View>
                     </View>
                     <TouchableOpacity onPress={_ => this.props.navigation.closeDrawer()}>
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
         display:"flex", 
         flexDirection:"row",
         paddingTop: 25,
-        paddingLeft: 20,
+        paddingLeft: 10,
         paddingBottom: 15,
     },
 
