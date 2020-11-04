@@ -1,9 +1,8 @@
 import React, { memo } from "react";
-import Background from "../components/Background";
-import Logo from "../components/Logo";
-import Header from "../components/Header";
-import Button from "../components/Button";
-import Paragraph from "../components/Paragraph";
+import Background from "../../../AppSetting/components/Background";
+import Logo from "../../../AppSetting/components/Logo";
+import Button from "../../../AppSetting/components/Button";
+import Paragraph from "../../../AppSetting/components/Paragraph";
 import { View } from "react-native";
 
 const HomeScreen = ({ navigation }) => (

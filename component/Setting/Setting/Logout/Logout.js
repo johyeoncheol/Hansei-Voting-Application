@@ -1,9 +1,8 @@
 import React, { memo } from "react";
-import Background from "../components/Background";
-import Logo from "../components/Logo";
-import Header from "../components/Header";
-import Paragraph from "../components/Paragraph";
-import Button from "../components/Button";
+import Background from "../../../AppSetting/components/Background";
+import Logo from "../../../AppSetting/components/Logo";
+import Paragraph from "../../../AppSetting/components/Paragraph";
+import Button from "../../../AppSetting/components/Button";
 import { logoutUser } from "../api/auth-api";
 import { View } from "react-native";
 

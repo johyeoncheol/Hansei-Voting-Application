@@ -85,7 +85,7 @@ const appDrawer = createDrawerNavigator(
             },
             itemstyle: {
                 borderRadius: 4,
-            }
+            },
         }
     },
 )
