@@ -4,13 +4,15 @@ import Logo from "../../../AppSetting/components/Logo";
 import Button from "../../../AppSetting/components/Button";
 import Paragraph from "../../../AppSetting/components/Paragraph";
 import { View } from "react-native";
+import BackButton from "../../../AppSetting/components/BackButton";
 
 const HomeScreen = ({ navigation }) => (
   <Background>
-    <View style={{marginBottom:30}}></View>
-    <Logo/>
+    <View style={{ marginBottom: 30 }}></View>
+    <BackButton goBack={() => navigation.navigate("OffLogin")} />
+    <Logo />
 
-    <View style={{marginBottom:60}}></View>
+    <View style={{ marginBottom: 60 }}></View>
     <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
       로그인
     </Button>

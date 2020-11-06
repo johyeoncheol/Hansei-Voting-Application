@@ -6,7 +6,7 @@ import Background from '../../AppSetting/background/background1';
 
 const { width, height } = Dimensions.get("window");
 
-export default class Voting extends React.Component {
+export default class VoteHome extends React.Component {
     render() {
         return (
             <Background>

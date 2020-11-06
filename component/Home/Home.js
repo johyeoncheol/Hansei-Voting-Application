@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 20,
         marginBottom: 10,
-        width: width - 80,
+        width: width *0.8,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
         borderBottomLeftRadius: 10,
