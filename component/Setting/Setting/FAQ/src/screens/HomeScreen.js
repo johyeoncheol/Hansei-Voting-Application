@@ -45,6 +45,13 @@ export default class HomeScreen extends Component {
                   })
                }
             />
+
+            <BoardList
+               board={this.state.board}
+               navigation={this.props.navigation}
+               deleteFunc={this.deleteBoard.bind(this)}
+               editFunc={this.editBoard.bind(this)}
+            />
          </View>
       );
    }

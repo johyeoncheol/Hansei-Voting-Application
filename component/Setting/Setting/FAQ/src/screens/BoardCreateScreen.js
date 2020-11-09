@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, TextInput } from "react-native";
 import MyButton from "../components/MyButton";
 
+import BoardCreateContainer from "../components/BoardCreateContainer";
+
 export default class BoardCreateScreen extends React.Component {
    constructor(props) {
       super(props);

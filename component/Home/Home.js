@@ -1,109 +1,151 @@
 ﻿import React, { Component } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
-import Icon from 'react-native-vector-icons/Fontisto';
-import Time from './time';
+import Icon from "react-native-vector-icons/Fontisto";
+import Time from "./time";
 
 const { width, height } = Dimensions.get("window");
 
-import Background from '../AppSetting/background/background3';
+import Background from "../AppSetting/background/background3";
 
 export default class Home extends Component {
-
-    static navigationOptions = {
-        tabBarIcon: ({ tintColor }) => (
-            <Icon name='home' size={20} style={{ color: tintColor }} />
-        )
-    }
-    render() {
-        return (
-            <Background>
-                <View style={styles.container}>
-                    <View style={styles.TopContainer}>
-                        <Time />
-                        <Text style={styles.fontStyle}>공지사항</Text>
-                    </View>
-                    <View style={styles.BottomContainer}>
-                        <View style={styles.card}>
-                            <ScrollView>
-                                <TouchableOpacity><Text style={styles.MajorName}>[총학생회] 총학생회 투표일정 </Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[미디어영상광고학과] 학과 투표일정</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[총학생회] 도서관 안건 결과</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[경창행정학과] 2020년 장부 결과</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[전자소프트웨어학과] 학과 이름 변경 관련</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[간호학과] 학과 투표 일정</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[대의원회] 투표 결과</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[사회복지학과] 사회 봉사 모집 공고</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[음악학과] 음악회 일정</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[공연예술학과] 공연 일정</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={styles.MajorName}>[시각정보디자인학과] 학과 투표 일정</Text></TouchableOpacity>
-                            </ScrollView>
-                        </View>
-                    </View>
-                </View>
-            </Background>
-        )
-    }
+   static navigationOptions = {
+      tabBarIcon: ({ tintColor }) => (
+         <Icon name="home" size={20} style={{ color: tintColor }} />
+      ),
+   };
+   render() {
+      return (
+         <Background>
+            <View style={styles.container}>
+               <View style={styles.TopContainer}>
+                  <Time />
+                  <Text style={styles.fontStyle}>공지사항</Text>
+               </View>
+               <View style={styles.BottomContainer}>
+                  <View style={styles.card}>
+                     <ScrollView>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [총학생회] 총학생회 투표일정{" "}
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [미디어영상광고학과] 학과 투표일정
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [총학생회] 도서관 안건 결과
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [경창행정학과] 2020년 장부 결과
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [전자소프트웨어학과] 학과 이름 변경 관련
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [간호학과] 학과 투표 일정
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [대의원회] 투표 결과
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [사회복지학과] 사회 봉사 모집 공고
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [음악학과] 음악회 일정
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [공연예술학과] 공연 일정
+                           </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                           <Text style={styles.MajorName}>
+                              [시각정보디자인학과] 학과 투표 일정
+                           </Text>
+                        </TouchableOpacity>
+                     </ScrollView>
+                  </View>
+               </View>
+            </View>
+         </Background>
+      );
+   }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center"
-    },
-    fontStyle: {
-        fontSize: 24,
-        color: "#1957A4",
-        marginTop:15,
-        marginLeft:width-220,
-    },
-    TopContainer: {
-        flex: 1,
-        justifyContent: 'center',
-    },
-    BottomContainer: {
-        flex: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    card: {
-        backgroundColor: "white",
-        justifyContent:'center',
-        alignItems:"center",
-        flex: 1,
-        marginTop: 20,
-        marginBottom: 10,
-        width: width *0.8,
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10,
-        ...Platform.select({
-            ios: {
-                shadowOpacity: 0.5,
-                shadowColor: "rgb(50,50,50)",
-                shadowRadius: 5,
-                shadowOffset: {
-                    height: -1,
-                    width: 0
-                }
+   container: {
+      flex: 1,
+      justifyContent: "center",
+   },
+   fontStyle: {
+      fontSize: 24,
+      color: "#1957A4",
+      marginTop: 15,
+      marginLeft: width - 220,
+   },
+   TopContainer: {
+      flex: 1,
+      justifyContent: "center",
+   },
+   BottomContainer: {
+      flex: 5,
+      alignItems: "center",
+      justifyContent: "center",
+   },
+   card: {
+      backgroundColor: "white",
+      justifyContent: "center",
+      alignItems: "center",
+      flex: 1,
+      marginTop: 20,
+      marginBottom: 10,
+      width: width * 0.8,
+      borderTopLeftRadius: 10,
+      borderTopRightRadius: 10,
+      borderBottomLeftRadius: 10,
+      borderBottomRightRadius: 10,
+      ...Platform.select({
+         ios: {
+            shadowOpacity: 0.5,
+            shadowColor: "rgb(50,50,50)",
+            shadowRadius: 5,
+            shadowOffset: {
+               height: -1,
+               width: 0,
             },
-            android: {
-                elevation: 3
-            }
-        })
-    },
-    MajorName: {
-        textAlign: 'center',
-        fontSize: 16,
-        color: "#1957A4",
-        marginTop: 20,
-        marginLeft:10,
-        marginRight:10,
-    },
-})
-
+         },
+         android: {
+            elevation: 3,
+         },
+      }),
+   },
+   MajorName: {
+      textAlign: "center",
+      fontSize: 16,
+      color: "#1957A4",
+      marginTop: 20,
+      marginLeft: 10,
+      marginRight: 10,
+   },
+});
 
 // import * as React from 'react';
 // import {useEffect, useState} from 'react';
@@ -308,4 +350,3 @@ const styles = StyleSheet.create({
 //     </Provider>
 //   );
 // }
-

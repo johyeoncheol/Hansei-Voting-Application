@@ -7,22 +7,20 @@ import { logoutUser } from "../api/auth-api";
 import { View } from "react-native";
 import BackButton from "../../../AppSetting/components/BackButton";
 
-const Dashboard = ({navigation}) => (
-  <Background>
-    <View style={{marginBottom:30}}></View>
-    <Logo />
-    <View style={{marginBottom:10}}></View>
-    <Paragraph>
-      로그아웃 하시겠습니까?
-    </Paragraph>
-    <View style={{marginBottom:20}}></View>
-    <Button mode="contained" onPress={() => navigation.navigate("OnLogin")}>
-      돌아가기
-    </Button>
-    <Button mode="outlined" onPress={() => logoutUser()}>
-      로그아웃
-    </Button>
-  </Background>
+const Dashboard = ({ navigation }) => (
+   <Background>
+      <View style={{ marginBottom: 30 }}></View>
+      <Logo />
+      <View style={{ marginBottom: 10 }}></View>
+      <Paragraph>로그아웃 하시겠습니까?</Paragraph>
+      <View style={{ marginBottom: 20 }}></View>
+      <Button mode="contained" onPress={() => navigation.navigate("OnLogin")}>
+         돌아가기
+      </Button>
+      <Button mode="outlined" onPress={() => logoutUser()}>
+         로그아웃
+      </Button>
+   </Background>
 );
 
 export default memo(Dashboard);

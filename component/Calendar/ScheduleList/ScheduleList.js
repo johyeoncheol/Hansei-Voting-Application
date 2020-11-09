@@ -61,7 +61,6 @@ export default class App extends React.Component {
       <View style={styles.container}>
         {statusbar}
 
-        <Header title="Todo" />
 
         <InputBar
           addNewTodo={() => this.addNewTodo()}
