@@ -18,7 +18,7 @@ const Register = ({ navigation }) => {
                </Text>
             </View>
             <View style={styles.card}>
-               <ScrollView></ScrollView>
+               <ScrollView>{console.log(navigation)}</ScrollView>
             </View>
             <Button
                style={{ width: width * 0.65, marginBottom: 30 }}

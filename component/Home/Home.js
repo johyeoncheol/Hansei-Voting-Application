@@ -1,7 +1,6 @@
 ﻿import React, { Component } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
 import Icon from "react-native-vector-icons/Fontisto";
 import Time from "./time";
 
@@ -28,7 +27,7 @@ export default class Home extends Component {
                      <ScrollView>
                         <TouchableOpacity>
                            <Text style={styles.MajorName}>
-                              [총학생회] 총학생회 투표일정{" "}
+                              [총학생회] 총학생회 투표일정
                            </Text>
                         </TouchableOpacity>
                         <TouchableOpacity>
