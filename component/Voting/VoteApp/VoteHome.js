@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import Background from "../../AppSetting/background/background1";
+import Button from "../../AppSetting/components/Button";
 
 const { width, height } = Dimensions.get("window");
 
@@ -35,15 +36,26 @@ export default class VoteHome extends React.Component {
                      4. 투표는 꼭! 주위에 아무도 없는 곳에서 진행해 주세요.
                   </Text>
                </View>
-               <TouchableOpacity
+               <Button
+                  style={{
+                     width: width * 0.7,
+                     height: height * 0.08,
+                     marginBottom: 30,
+                     marginLeft: width * 0.07,
+                  }}
+                  mode="contained"
                   onPress={() => this.props.navigation.navigate("MajorSelect")}
-                  style={styles.button}
                >
-                  <Image
-                     style={styles.button}
-                     source={require("../../../assets/getstarted.png")}
-                  />
-               </TouchableOpacity>
+                  <Text
+                     style={{
+                        fontSize: 20,
+                        color: "white",
+                        marginTop: height * 0.01,
+                     }}
+                  >
+                     투표하기
+                  </Text>
+               </Button>
             </View>
          </Background>
       );
@@ -55,12 +67,12 @@ const styles = StyleSheet.create({
       flex: 1,
    },
    button: {
-      width: width - 90,
-      height: height / 9,
+      width: width * 0.85,
+      height: height * 0.1,
       paddingLeft: 10,
    },
    TopContent: {
-      marginBottom: height - 550,
+      marginBottom: height * 0.2,
    },
    title: {
       color: "#1917A4",
@@ -70,7 +82,7 @@ const styles = StyleSheet.create({
    content: {
       color: "#1917A4",
       fontSize: 16,
-      marginTop: 25,
+      marginTop: height * 0.03,
       marginLeft: 15,
       fontWeight: "900",
    },

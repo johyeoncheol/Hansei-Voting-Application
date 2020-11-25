@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
          height: 0,
       },
       textShadowRadius: 10,
-      fontSize: 20,
+      fontSize: 19,
       color: "#1957A4",
    },
    container: {
       flex: 1,
-      marginLeft: width - 220,
+      marginLeft: width * 0.4,
       justifyContent: "center",
    },
 });

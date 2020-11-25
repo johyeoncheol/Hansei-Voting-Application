@@ -11,6 +11,7 @@ import { StatusBar } from "expo-status-bar";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Background from "../../AppSetting/background/background4";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Button from "../../AppSetting/components/Button";
 
 const { width, height } = Dimensions.get("window");
 
@@ -33,17 +34,27 @@ export default class Suggestion extends React.Component {
                   style={styles.suggestionTitle}
                   source={require("../../../assets/suggestioncontent.png")}
                />
-               <TouchableOpacity
+               <Button
+                  style={{
+                     width: width * 0.7,
+                     height: height * 0.08,
+                     marginLeft: width * 0.07,
+                  }}
+                  mode="contained"
                   onPress={() =>
                      this.props.navigation.navigate("SuggestContent")
                   }
-                  style={styles.button}
                >
-                  <Image
-                     style={styles.button}
-                     source={require("../../../assets/getstarted2.png")}
-                  />
-               </TouchableOpacity>
+                  <Text
+                     style={{
+                        fontSize: 20,
+                        color: "white",
+                        marginTop: height * 0.01,
+                     }}
+                  >
+                     건의하기
+                  </Text>
+               </Button>
             </View>
          </Background>
       );
@@ -72,7 +83,7 @@ const styles = StyleSheet.create({
    suggestionTitle: {
       width: width * 0.8,
       height: height * 0.4,
-      marginLeft: width / 20,
+      marginLeft: width * 0.03,
       resizeMode: "contain",
       borderTopLeftRadius: 10,
       borderTopRightRadius: 10,

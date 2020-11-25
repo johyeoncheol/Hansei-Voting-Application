@@ -8,6 +8,7 @@ import VoteHome from "./VoteApp/VoteHome";
 import MajorSelect from "./VoteApp/MajorSelect";
 import VoteList from "./VoteApp/VoteList";
 import RegisterVote from "./VoteApp/RegisterVote";
+import DoVote from "./VoteApp/DoVote";
 
 const AppStackNavigator = createStackNavigator(
    {
@@ -22,6 +23,9 @@ const AppStackNavigator = createStackNavigator(
       },
       RegisterVote: {
          screen: RegisterVote,
+      },
+      DoVote: {
+         screen: DoVote,
       },
    },
    {

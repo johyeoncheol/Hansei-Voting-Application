@@ -24,6 +24,8 @@
       "react-live-clock": "^5.0.3",
       "react-moment": "^1.0.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.2.tar.gz",
+      "react-native-chart-kit": "^6.7.0",
+      "react-native-charts": "^3.0.0",
       "react-native-dates": "^2.0.4",
       "react-native-gesture-handler": "^1.7.0",
       "react-native-get-random-values": "^1.5.0",
@@ -35,6 +37,8 @@
       "react-native-safe-area-view": "^1.1.1",
       "react-native-screens": "^2.10.1",
       "react-native-status-bar-height": "^2.5.0",
+      "react-native-svg": "^12.1.0",
+      "react-native-svg-charts": "^5.4.0",
       "react-native-uuid": "^1.4.9",
       "react-native-web": "~0.13.12",
       "react-navigation": "^4.4.1",
@@ -42,7 +46,8 @@
       "react-navigation-stack": "^2.8.3",
       "react-navigation-tabs": "^2.9.1",
       "react-redux": "^7.2.1",
-      "redux": "^4.0.5"
+      "redux": "^4.0.5",
+      "yarn": "^1.22.10"
    },
    "devDependencies": {
       "@babel/core": "~7.9.0"

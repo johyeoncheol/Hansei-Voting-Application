@@ -17,32 +17,53 @@ const { width, height } = Dimensions.get("window");
 const Register = ({ navigation }) => {
    return (
       <Background>
-         <BackButton goBack={() => navigation.navigate("MajorSelect")} />
+         <BackButton goBack={() => navigation.navigate("VoteList")} />
          <View style={styles.container}>
-            <View style={styles.TopContent}>
-               <Text style={styles.Majorname}>
-                  {navigation.state.params.Majorname}
-               </Text>
-            </View>
             <View style={styles.card}>
+               <Text style={styles.VoteListContent}>
+                  [총학생회] 총학생회장 투표
+               </Text>
+               <Text style={styles.NoticeContent}>
+                  클릭후 투표완료를 눌러주세요
+               </Text>
                <ScrollView>
                   <View style={styles.VoteList}>
-                     <TouchableOpacity
-                        onPress={() => navigation.navigate("DoVote")}
-                     >
-                        <Text style={styles.VoteListContent}>
-                           [총학생회] 총학생회장 투표
-                        </Text>
-                     </TouchableOpacity>
+                     <View style={{ flexDirection: "row" }}>
+                        <Text style={styles.VoteListContent}>후보 1</Text>
+                        <Button
+                           style={{ width: width * 0.4, marginBottom: 30 }}
+                           mode="outlined"
+                        >
+                           조현철
+                        </Button>
+                     </View>
+                     <View style={{ flexDirection: "row" }}>
+                        <Text style={styles.VoteListContent}>후보 2</Text>
+                        <Button
+                           style={{ width: width * 0.4, marginBottom: 30 }}
+                           mode="outlined"
+                        >
+                           이지석
+                        </Button>
+                     </View>
+                     <View style={{ flexDirection: "row" }}>
+                        <Text style={styles.VoteListContent}>후보 3</Text>
+                        <Button
+                           style={{ width: width * 0.4, marginBottom: 30 }}
+                           mode="outlined"
+                        >
+                           유시은
+                        </Button>
+                     </View>
                   </View>
                </ScrollView>
             </View>
             <Button
                style={{ width: width * 0.65, marginBottom: 30 }}
                mode="contained"
-               onPress={() => navigation.navigate("RegisterVote")}
+               onPress={() => navigation.navigate("VoteList")}
             >
-               투표 생성
+               투표 완료
             </Button>
          </View>
       </Background>
@@ -112,6 +133,13 @@ const styles = StyleSheet.create({
       marginTop: 22,
       marginLeft: 10,
       marginRight: 10,
-      marginBottom: 22,
+      marginBottom: 12,
+   },
+   NoticeContent: {
+      textAlign: "center",
+      fontSize: 15,
+      color: "#394174",
+      marginTop: 12,
+      marginBottom: 12,
    },
 });
