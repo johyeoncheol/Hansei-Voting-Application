@@ -14,6 +14,13 @@
 8. BottomNavigation
 9. TabNavigation
 
+## 환경설정
+1. WIndows 환경
+2. ReactNative
+3. Node.js
+4. Firebase
+
+
 ## 참고화면
 
 ### Galaxy9, Galaxy 10 5G , IPhone XS TESTING
