@@ -11,11 +11,13 @@
 5. 건의함
 6. 설정화면
 7. 캘린더 기능(미완성)
+8. BottomNavigation
+9. TabNavigation
 
 ## 참고화면
 
 ### Galaxy9, Galaxy 10 5G , IPhone XS TESTING
-<div style="flex-direction: row;">
+<div style="flex-direction: row; margin-bottom: 15;>
   <img src="https://user-images.githubusercontent.com/50797070/100570819-f94f0500-3314-11eb-834d-238cdb2408a6.jpg" width="250" height="500"/>
   <img src="https://user-images.githubusercontent.com/50797070/100571034-79756a80-3315-11eb-8243-6536e139fbb8.jpg" width="250" height="500"/>
   <img src="https://user-images.githubusercontent.com/50797070/100571093-9e69dd80-3315-11eb-84b2-4109f0e7416b.jpg" width="250" height="500"/>
