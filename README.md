@@ -20,10 +20,10 @@
 3. Node.js
 4. Firebase
 
+## Testing Device
+### Galaxy9, Galaxy 10 5G , IPhone XS TESTING
 
 ## 참고화면
-
-### Galaxy9, Galaxy 10 5G , IPhone XS TESTING
 
 <div style="flex-direction: row;">
   <img src="https://user-images.githubusercontent.com/50797070/100577024-a714e080-3322-11eb-8be7-282a7e0b4f0c.jpg" width="250" height="500"/>
